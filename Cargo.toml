@@ -1,0 +1,18 @@
+[package]
+name = "webmote"
+version = "1.0.0"
+edition = "2024"
+
+[dependencies]
+tiny_http = "0.12"
+tungstenite = "0.21"
+enigo = { version = "0.2", default-features = false, features = ["x11rb"] }
+# default-features off drops the `image` crate (and moxcms/pxfm/bytemuck): we only
+# use the terminal `render::unicode` renderer, not image-file output.
+qrcode = { version = "0.14", default-features = false }
+
+[profile.release]
+opt-level = "z"   # optimise for size
+lto = true        # cross-crate inlining + dead-code elimination
+codegen-units = 1 # better optimisation at the cost of build parallelism
+strip = true      # drop symbols

@@ -1,0 +1,51 @@
+* { box-sizing: border-box; margin: 0; padding: 0; touch-action: none; }
+body {
+  background: #1a1a2e;
+  color: #e0e0e0;
+  font-family: system-ui, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  gap: 8px;
+  padding: 8px;
+}
+#status {
+  font-size: 11px;
+  color: #888;
+  text-align: center;
+  height: 16px;
+}
+#trackpad {
+  flex: 1;
+  background: #16213e;
+  border-radius: 12px;
+  border: 1px solid #0f3460;
+  cursor: crosshair;
+}
+.btn-row {
+  display: flex;
+  gap: 8px;
+}
+button {
+  flex: 1;
+  padding: 16px 8px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #0f3460;
+  color: #e0e0e0;
+  -webkit-tap-highlight-color: transparent;
+}
+button:active { background: #e94560; color: #fff; }
+button { display: flex; align-items: center; justify-content: center; gap: 6px; }
+.favicon { width: 18px; height: 18px; object-fit: contain; border-radius: 3px; }
+#vol-row button { font-size: 22px; }
+#mute-btn { background: #2a2a4a; }
+#vol-display {
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+  height: 14px;
+}

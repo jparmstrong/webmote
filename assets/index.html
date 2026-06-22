@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Webmote</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div id="status">connecting...</div>
+<div id="trackpad"></div>
+
+<div class="btn-row">
+  <button id="left-btn" ontouchstart="click_btn('left')">Left</button>
+  <button id="right-btn" ontouchstart="click_btn('right')">Right</button>
+</div>
+
+<div class="btn-row">
+  <button ontouchstart="macro_key('fullscreen')">Fullscreen</button>
+  <button ontouchstart="macro_key('apps')">Apps</button>
+</div>
+
+<div class="btn-row">
+  <button ontouchstart="launch('netflix')"><img src="https://www.netflix.com/favicon.ico" class="favicon" alt="">Netflix</button>
+  <button ontouchstart="launch('youtubetv')"><img src="https://tv.youtube.com/favicon.ico" class="favicon" alt="">YT TV</button>
+  <button ontouchstart="launch('youtube')"><img src="https://www.youtube.com/favicon.ico" class="favicon" alt="">YouTube</button>
+</div>
+
+<div id="vol-display">vol: --</div>
+<div class="btn-row" id="vol-row">
+  <button ontouchstart="volume('down')">−</button>
+  <button id="mute-btn" ontouchstart="volume('mute')">Mute</button>
+  <button ontouchstart="volume('up')">+</button>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>
