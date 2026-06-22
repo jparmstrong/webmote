@@ -3,7 +3,7 @@
 LAN remote control for your **Linux or macOS** desktop. Run it, scan the QR code on your phone, and control the mouse and volume from your browser.
 
 <p align="center">
-  <img src="assets/webmote.jpg" alt="webmote running on a phone" width="280">
+  <img src="screenshots/webmote.jpg" alt="webmote running on a phone" width="280">
 </p>
 
 ## Requirements
