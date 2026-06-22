@@ -143,3 +143,7 @@ The startup log prints the detected backend: `Volume backend: wpctl`, `pactl`, o
 
 **Can't connect from phone**
 Confirm both devices are on the same network and the firewall ports are open. The URL printed at startup shows the correct LAN IP.
+
+## License
+
+[MIT](LICENSE)
