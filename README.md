@@ -48,13 +48,6 @@ xattr -dr com.apple.quarantine webmote
 ./webmote
 ```
 
-Verify a download against its `.sha256` (also on the release page):
-
-```bash
-curl -LO https://github.com/jparmstrong/webmote/releases/download/v1.0.0/webmote-v1.0.0-linux-x86_64.tar.gz.sha256
-sha256sum -c webmote-v1.0.0-linux-x86_64.tar.gz.sha256
-```
-
 ## Build from source
 
 ```bash
