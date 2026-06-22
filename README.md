@@ -14,7 +14,48 @@ LAN remote control for your **Linux or macOS** desktop. Run it, scan the QR code
 - Grant the terminal (or app) running webmote **Accessibility** permission: System Settings → Privacy & Security → Accessibility. This is required for synthesizing mouse and key events.
 - Volume control uses the built-in `osascript` — nothing to install.
 
-## Install
+## Download a release (recommended)
+
+Grab a prebuilt archive from the [latest release](https://github.com/jparmstrong/webmote/releases/latest). Each archive bundles the `webmote` binary together with the `assets/` UI directory — extract it, then run `./webmote` from inside the extracted folder.
+
+**Linux x86_64**
+
+```bash
+# curl
+curl -L https://github.com/jparmstrong/webmote/releases/download/v1.0.0/webmote-v1.0.0-linux-x86_64.tar.gz | tar -xz
+# or wget
+wget -qO- https://github.com/jparmstrong/webmote/releases/download/v1.0.0/webmote-v1.0.0-linux-x86_64.tar.gz | tar -xz
+
+cd webmote-v1.0.0-linux-x86_64
+./webmote
+```
+
+**macOS — Apple Silicon (arm64)**
+
+```bash
+curl -L https://github.com/jparmstrong/webmote/releases/download/v1.0.0/webmote-v1.0.0-macos-arm64.tar.gz | tar -xz
+cd webmote-v1.0.0-macos-arm64
+xattr -dr com.apple.quarantine webmote   # clear Gatekeeper quarantine (unsigned binary)
+./webmote
+```
+
+**macOS — Intel (x86_64)**
+
+```bash
+curl -L https://github.com/jparmstrong/webmote/releases/download/v1.0.0/webmote-v1.0.0-macos-x86_64.tar.gz | tar -xz
+cd webmote-v1.0.0-macos-x86_64
+xattr -dr com.apple.quarantine webmote
+./webmote
+```
+
+Verify a download against its `.sha256` (also on the release page):
+
+```bash
+curl -LO https://github.com/jparmstrong/webmote/releases/download/v1.0.0/webmote-v1.0.0-linux-x86_64.tar.gz.sha256
+sha256sum -c webmote-v1.0.0-linux-x86_64.tar.gz.sha256
+```
+
+## Build from source
 
 ```bash
 git clone <repo>
